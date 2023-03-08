@@ -1,0 +1,313 @@
+body{
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 1;
+    margin: 0;
+    background-color: #151515;
+    color: white;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 96px;
+}
+
+nav{
+    width: 100%;
+    height: 96px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(9px) brightness(50%);
+    z-index: 3;
+}
+
+nav img{
+    width: 50%;
+    height: 64px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+nav section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+iframe{
+    margin-top: 48px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+.banner{
+    width: 100%;
+    height: calc(100vh - 96px);
+    position: relative;
+}
+
+.bannerName{
+    font-size: 2rem;
+}
+.bannerDescription{
+    display: block;
+}
+
+.bannerShowDetails{
+    display: block;
+}
+
+.banner section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner section section{
+    margin-left: 2%;
+    width: 30%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: justify;
+}
+.banner section img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);    
+}
+
+.videoListContainer{
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: calc(100% - 10%);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.videoListHeader{
+    font-size: 1.5rem;
+}
+
+.videoListTextContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.videoListVideoContainer{
+    width: 100%;
+    height: max-content; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+.videoListVideoElement{
+    width: 100%;
+    height: max-content;
+    transition: 0.3s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.videoListVideoElementCover{
+    width: 100%;
+    aspect-ratio: 16/9;
+    transition: 0.4s all;
+    mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);  
+    object-fit: cover;
+}
+
+.videoListVideoElementData{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.videoListVideoElement:hover .videoListVideoElementCover{
+    width: 100%;
+    opacity: 9%;
+}
+
+.showHeader{
+    font-size: 1.2rem;
+    margin: 0;
+}
+.showRuntime{
+    font-size: 0.75rem;
+    margin: 10%;
+}
+
+.watch{
+    width: 100%;
+    border: none;
+    background-color: violet;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 9%;
+    padding-bottom: 9%;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentDisplay{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentTitle{
+    font-size: 1.5rem;
+    margin-top: 96px;
+}
+
+.characterGrid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 9px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.characterGridElement{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.characterGridImage{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 9/16;
+    object-fit: cover;
+}
+
+.characterGridData{
+    height: 100%;
+    padding-left: 10%;
+    background-color: #191919;
+}
+
+.episodeContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+.episodeContainerElement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.episodeContainerCover{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.episodeContainerSeries{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 5%;
+    margin-left: 5%;
+    padding: 3%;
+    background-color: violet;
+    color: black;
+    
+}
+
+@media  screen and (max-width: 768px) {
+    nav img{
+        width: 100%;
+    }
+    nav section{
+        flex-direction: column;
+        margin: 2px;
+    }
+    nav section p{
+        flex-direction: column;
+        margin: 2px;
+    }
+    .bannerDescription{
+        display: none;
+    }
+    .banner section section{
+        width: 70%;
+        
+    }
+    .videoListVideoContainer{
+        margin-top: 9%;
+        margin-bottom: 9%;
+        grid-template-columns: 1fr;
+    }
+    .characterGrid{
+        grid-template-columns: 1fr;
+    }
+    .episodeContainer{
+        grid-template-columns: 1fr;
+    }
+}
+

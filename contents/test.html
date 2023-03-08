@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/core.css">
+    <link rel="shortcut icon" href="../asset/image/enchantment.png">
+    <title>Enchantment</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <img src="../asset/image/enchantment.png" alt="">
+            <section>
+                <p>Prismatic</p>
+                <p>Enchantment</p>
+                <p>About</p>
+            </section>
+        </nav>
+
+        
+
+        <section class="content">
+
+            <section class="contentDisplay">
+                <div id="player"></div>
+            </section>
+
+            <section style="text-align: left; width: 80%;">
+                <h1 class="contentTitle">The Name of The Content</h1>
+                <p>1hr : 43mins</p>
+                <p>February 2023</p>
+
+                <h1 class="contentTitle">Description</h1>
+                <p style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper lorem ac magna finibus, nec lobortis elit congue. Mauris fermentum ipsum vel nunc fringilla, a venenatis nisl vestibulum. Pellentesque quis nisl diam. Morbi pellentesque turpis ac turpis venenatis, ac hendrerit libero porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla tellus massa, pharetra ut sodales ut, tincidunt aliquet arcu. Ut efficitur neque ex, nec euismod ligula eleifend quis. Morbi efficitur, leo in pellentesque blandit, sem ex facilisis mi, mollis molestie velit dolor in est. Pellentesque elementum bibendum odio, eget commodo ex tincidunt vel.</p>
+
+                <h1 class="contentTitle">Episodes</h1>
+
+                <section class="episodeContainer">
+                    <section class="episodeContainerElement">
+                        <img class="episodeContainerCover" src="../asset/image/blank.jpg" alt="">
+                        <p class="episodeContainerSeries">S01E01</p>
+                    </section>
+                    <section class="episodeContainerElement">
+                        <img class="episodeContainerCover" src="../asset/image/blank.jpg" alt="">
+                        <p class="episodeContainerSeries">S01E02</p>
+                    </section>
+                    <section class="episodeContainerElement">
+                        <img class="episodeContainerCover" src="../asset/image/blank.jpg" alt="">
+                        <p class="episodeContainerSeries">S01E03</p>
+                    </section>
+                    <section class="episodeContainerElement">
+                        <img class="episodeContainerCover" src="../asset/image/blank.jpg" alt="">
+                        <p class="episodeContainerSeries">S01E04</p>
+                    </section>
+                </section>
+
+                <h1 class="contentTitle">Cast</h1>
+                <section class="characterGrid">
+                    <section class="characterGridElement">
+                        <img class="characterGridImage" src="../asset/image/blank.jpg" alt="">
+                        <section class="characterGridData">
+                            <p>Name</p>
+                            <p>As Someone</p>
+                        </section>
+                    </section>
+                    <section class="characterGridElement">
+                        <img class="characterGridImage" src="../asset/image/blank.jpg" alt="">
+                        <section class="characterGridData">
+                            <p>Name</p>
+                            <p>As Someone</p>
+                        </section>
+                    </section>
+                    <section class="characterGridElement">
+                        <img class="characterGridImage" src="../asset/image/blank.jpg" alt="">
+                        <section class="characterGridData">
+                            <p>Name</p>
+                            <p>As Someone</p>
+                        </section>
+                    </section>
+                </section>
+
+                <h1 class="contentTitle">Crew</h1>
+                <section class="characterGrid">
+                    <section class="characterGridElement">
+                        <img class="characterGridImage" src="../asset/image/blank.jpg" alt="">
+                        <section class="characterGridData">
+                            <p>Name</p>
+                            <p>Director</p>
+                        </section>
+                    </section>
+                    <section class="characterGridElement">
+                        <img class="characterGridImage" src="../asset/image/blank.jpg" alt="">
+                        <section class="characterGridData">
+                            <p>Name</p>
+                            <p>Editor</p>
+                        </section>
+                    </section>
+                    <section class="characterGridElement">
+                        <img class="characterGridImage" src="../asset/image/blank.jpg" alt="">
+                        <section class="characterGridData">
+                            <p>Name</p>
+                            <p>Cash</p>
+                        </section>
+                    </section>
+                </section>
+
+            </section> 
+
+        </section>
+
+
+        <footer id="footerDetails"></footer>
+    </main>
+</body>
+
+<script>
+
+    videoname = 'RGvpY228Awc';
+
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: 'auto',
+            width: '100%',
+            videoId: videoname,
+            playerVars: {
+                'controls': 1,
+                'modestbranding': 1,
+                'playsinline': 1,
+                'rel': 0
+            },
+            events: {
+            'onReady': onPlayerReady,
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        player.playVideo();
+    }
+
+    function init(){
+        document.getElementById("footerDetails").innerHTML="<p>Enchantment &#169; 2023</p>";
+
+    }
+
+    init();
+    
+</script>
+</html>
